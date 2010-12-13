@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Attitude/Turn Indicator -->
+
+<PropertyList>
+
+  <path>interior_dc8.ac</path>
+<!--
+  <animation>
+    <type>material</type>
+    <object-name>AttitudeBall</object-name>
+    <object-name>SkyPointer</object-name>
+    <object-name>slip-ball</object-name>
+    <object-name>ils-flag</object-name>
+    <object-name>course-flag</object-name>
+    <object-name>barre</object-name>
+    <object-name>barre1</object-name>
+    <object-name>barre2</object-name>
+    <object-name>nav-pitch-steering-ba</object-name>
+    <object-name>nav-yaw-steering-bar</object-name>
+    <emission>
+      <red>   0.6 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission> 
+  </animation>    
+-->
+
+</PropertyList>

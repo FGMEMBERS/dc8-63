@@ -1,0 +1,526 @@
+<!--
+DC-8-63 cockpit
+Isaias Prestes - a generic cockpit for DC-8
+-->
+
+<PropertyList>
+ <path>Aircraft/dc8-63/Models/dc8_cockpit.ac</path>
+ 
+    <animation>
+        <type>material</type>
+        <object-name>panel_cap_firstofficer</object-name>
+        <object-name>central</object-name>
+        <object-name>piano</object-name>
+        <object-name>windows_structure</object-name>
+        <object-name>structpainel</object-name>
+        <emission>
+            <red>0.8</red>
+            <green>0.4</green>
+            <blue>0.2</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        </emission>
+    </animation>
+
+ 
+    <animation>
+        <type>select</type>
+        <object-name>instr1</object-name>
+        <condition>
+        	<not>
+            <property>sim/current-view/internal</property>
+            </not>
+        </condition>
+    </animation>
+
+<!--
+
+ <model>
+  <name>xxxxxxxxx</name>
+  <path>Aircraft/xxxxxxxxxxxxxxxxxxxxxxxxx</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+-->
+
+<!-- Obejects -->
+ <model>
+  <name>Interior Objects</name>
+  <path>Aircraft/dc8-63/Models/Instruments/Objects/interior_dc8.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+   <pitch-deg>0.0</pitch-deg>
+  </offsets>
+ </model>
+
+ 
+ <!-- AI -->
+ <model>
+  <name>AI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/AI/ai.xml</path>
+  <offsets>
+   <x-m>-25.9924</x-m>
+   <y-m>-0.414613</y-m>
+   <z-m>-1.89824</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>AI2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/AI/ai.xml</path>
+  <offsets>
+   <x-m>-25.9924</x-m>
+   <y-m> 0.414613</y-m>
+   <z-m>-1.89824</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- StbAI -->
+ <model>
+  <name>AI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/STBYai/STBYai.xml</path>
+  <offsets>
+   <x-m>-25.9962</x-m>
+   <y-m>-0.143993</y-m>
+   <z-m>-1.87144</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+
+ <!-- HSI -->
+ <model>
+  <name>HSI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/HSI/hsi.xml</path>
+  <offsets>
+   <x-m>-25.9764</x-m>
+   <y-m>-0.414613</y-m>
+   <z-m>-2.01219</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>HSI2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/HSI/hsi.xml</path>
+  <offsets>
+   <x-m>-25.9764</x-m>
+   <y-m>0.414613</y-m>
+   <z-m>-2.01219</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- Altimeter -->
+ <model>
+  <name>Altimeter1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/Altimeter/altimeter1.xml</path>
+  <offsets>
+   <x-m>-25.9897</x-m>
+   <y-m>-0.320214</y-m>
+   <z-m>-1.91752</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Altimeter2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/Altimeter/altimeter1.xml</path>
+  <offsets>
+   <x-m>-25.9897</x-m>
+   <y-m> 0.512829</y-m>
+   <z-m>-1.91752</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- VSI -->
+ <model>
+  <name>VSI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/VSI2/vsi.xml</path>
+  <offsets>
+   <x-m>-25.9791</x-m>
+   <y-m>-0.320214</y-m>
+   <z-m>-1.99272</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>VSI2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/VSI2/vsi.xml</path>
+  <offsets>
+   <x-m>-25.9791</x-m>
+   <y-m> 0.512829</y-m>
+   <z-m>-1.99272</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- VSI -->
+ <model>
+  <name>VSI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/VSI2/vsi.xml</path>
+  <offsets>
+   <x-m>-25.9791</x-m>
+   <y-m>-0.320214</y-m>
+   <z-m>-1.99272</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>VSI2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/VSI2/vsi.xml</path>
+  <offsets>
+   <x-m>-25.9791</x-m>
+   <y-m> 0.512829</y-m>
+   <z-m>-1.99272</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- RMI -->
+ <model>
+  <name>RMI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/RMI/rmi.xml</path>
+  <offsets>
+   <x-m>-25.9791</x-m>
+   <y-m>-0.508933</y-m>
+   <z-m>-1.99272</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>RMI2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/RMI/rmi.xml</path>
+  <offsets>
+   <x-m>-25.9791</x-m>
+   <y-m> 0.324109</y-m>
+   <z-m>-1.99272</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- Clock -->
+ <model>
+  <name>Clock1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/Clock/clock.xml</path>
+  <offsets>
+   <x-m>-25.9678</x-m>
+   <y-m>-0.568564</y-m>
+   <z-m>-2.07291</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Clock2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/Clock/clock.xml</path>
+  <offsets>
+   <x-m>-25.9791</x-m>
+   <y-m> 0.58815</y-m>
+   <z-m>-1.99272</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- ASI -->
+ <model>
+  <name>ASI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/ASI/asi300.xml</path>
+  <offsets>
+   <x-m>-25.9896</x-m>
+   <y-m>-0.508933</y-m>
+   <z-m>-1.91752</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>ASI2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/ASI/asi300.xml</path>
+  <offsets>
+   <x-m>-25.9897</x-m>
+   <y-m> 0.324109</y-m>
+   <z-m>-1.91752</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- Altitude Set -->
+ <model>
+  <name>ASI1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/Altset/altset.xml</path>
+  <offsets>
+   <x-m>-25.9814</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-1.80041</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <!-- EGT -->
+ <model>
+  <name>EGT1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EGT/egtL1.xml</path>
+  <offsets>
+   <x-m>-25.996</x-m>
+   <y-m>-0.072573</y-m>
+   <z-m>-1.87271</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>EGT2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EGT/egtL2.xml</path>
+  <offsets>
+   <x-m>-25.996</x-m>
+   <y-m>-0.0228925</y-m>
+   <z-m>-1.87271</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>EGT3</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EGT/egtR3.xml</path>
+  <offsets>
+   <x-m>-25.996</x-m>
+   <y-m> 0.026788</y-m>
+   <z-m>-1.87271</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>EGT4</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EGT/egtR4.xml</path>
+  <offsets>
+   <x-m>-25.996</x-m>
+   <y-m> 0.076469</y-m>
+   <z-m>-1.87271</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- EPR -->
+ <model>
+  <name>EPR1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EPR/eprL1.xml</path>
+  <offsets>
+   <x-m>-26.0024</x-m>
+   <y-m>-0.072573</y-m>
+   <z-m>-1.82678</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>EPR2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EPR/eprL2.xml</path>
+  <offsets>
+   <x-m>-26.0024</x-m>
+   <y-m>-0.0228925</y-m>
+   <z-m>-1.82678</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>EPR3</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EPR/eprR3.xml</path>
+  <offsets>
+   <x-m>-26.0024</x-m>
+   <y-m> 0.026788</y-m>
+   <z-m>-1.82678</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>EPR4</name>
+  <path>Aircraft/dc8-63/Models/Instruments/EPR/eprR4.xml</path>
+  <offsets>
+   <x-m>-26.0024</x-m>
+   <y-m> 0.076469</y-m>
+   <z-m>-1.82678</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- FDC -->
+ <model>
+  <name>FDC1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/FDC/fdc.xml</path>
+  <offsets>
+   <x-m>-25.9948</x-m>
+   <y-m> 0.0</y-m>
+   <z-m>-1.76814</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- Flaps -->
+ <model>
+  <name>FDC1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/Flaps/flaps.xml</path>
+  <offsets>
+   <x-m>-25.9882</x-m>
+   <y-m> 0.249413</y-m>
+   <z-m>-1.92789</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+
+ <!-- FuelFlow -->
+ <model>
+  <name>FuelFlow1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/FuelFlow/fflow1.xml</path>
+  <offsets>
+   <x-m>-25.9831</x-m>
+   <y-m>-0.072573</y-m>
+   <z-m>-1.96458</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>FuelFlow2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/FuelFlow/fflow2.xml</path>
+  <offsets>
+   <x-m>-25.9831</x-m>
+   <y-m>-0.0228925</y-m>
+   <z-m>-1.96458</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>FuelFlow3</name>
+  <path>Aircraft/dc8-63/Models/Instruments/FuelFlow/fflow3.xml</path>
+  <offsets>
+   <x-m>-25.9831</x-m>
+   <y-m> 0.026788</y-m>
+   <z-m>-1.96458</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>FuelFlow4</name>
+  <path>Aircraft/dc8-63/Models/Instruments/FuelFlow/fflow4.xml</path>
+  <offsets>
+   <x-m>-25.9831</x-m>
+   <y-m> 0.076469</y-m>
+   <z-m>-1.96458</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- N1 -->
+ <model>
+  <name>N11</name>
+  <path>Aircraft/dc8-63/Models/Instruments/N1/n1-1.xml</path>
+  <offsets>
+   <x-m>-25.9895</x-m>
+   <y-m>-0.072573</y-m>
+   <z-m>-1.91864</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>N12</name>
+  <path>Aircraft/dc8-63/Models/Instruments/N1/n1-2.xml</path>
+  <offsets>
+   <x-m>-25.9895</x-m>
+   <y-m>-0.0228925</y-m>
+   <z-m>-1.91864</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>N13</name>
+  <path>Aircraft/dc8-63/Models/Instruments/N1/n1-3.xml</path>
+  <offsets>
+   <x-m>-25.9895</x-m>
+   <y-m> 0.026788</y-m>
+   <z-m>-1.91864</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>N14</name>
+  <path>Aircraft/dc8-63/Models/Instruments/N1/n1-4.xml</path>
+  <offsets>
+   <x-m>-25.9895</x-m>
+   <y-m> 0.076469</y-m>
+   <z-m>-1.91864</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <!-- MarkerBeacon -->
+ <model>
+  <name>MarkerBeacon1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/MarkerBeacon/marker_beacons.xml</path>
+  <offsets>
+   <x-m>-25.9986</x-m>
+   <y-m>-0.222233</y-m>
+   <z-m>-1.8541</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+ <model>
+  <name>MarkerBeacon2</name>
+  <path>Aircraft/dc8-63/Models/Instruments/MarkerBeacon/marker_beacons.xml</path>
+  <offsets>
+   <x-m>-25.9909</x-m>
+   <y-m> 0.63522</y-m>
+   <z-m>-1.90895</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+<!-- MagneticCompass -->
+ <model>
+  <name>MarkerBeacon1</name>
+  <path>Aircraft/dc8-63/Models/Instruments/MagneticCompass/mag-compass.xml</path>
+  <offsets>
+   <x-m>-26.0024</x-m>
+   <y-m> 0.00000</y-m>
+   <z-m>-1.49619</z-m>
+   <pitch-deg>0.0</pitch-deg>
+  </offsets>
+ </model>
+
+
+
+<!-- must be removed -->
+ <model>
+  <name>hdg-gyro</name>
+  <path>Aircraft/dc8-63/Models/Instruments/hdg-gauge.xml</path>
+  <offsets>
+   <x-m>-25.9896</x-m>
+   <y-m>-0.245518</y-m>
+   <z-m>-1.91752</z-m>
+   <pitch-deg>-8</pitch-deg>
+  </offsets>
+ </model>
+
+</PropertyList>
