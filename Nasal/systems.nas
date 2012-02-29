@@ -1,13 +1,13 @@
 # 777-200 systems
 #Syd Adams
 #
-aircraft.livery.init("Aircraft/777-200/Models/Liveries");
+aircraft.livery.init("Aircraft/777/Models/Liveries");
 var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
 var FHmeter = aircraft.timer.new("/instrumentation/clock/flight-meter-sec", 10).stop();
 var fuel_density =0;
 
 var EFB = gui.Dialog.new("/sim/gui/dialogs/EFB/dialog",
-        "Aircraft/777-200/Systems/EFB-dlg.xml");
+        "Aircraft/777/Systems/EFB-dlg.xml");
 
 #EFIS specific class
 # ie: var efis = EFIS.new("instrumentation/EFIS");
