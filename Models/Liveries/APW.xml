@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+	        <livery>
+	            <name type="string">APW</name>
+	            <texture>APW.png</texture>
+	        </livery>
+            <turbofan>
+	            <name type="string">ATI</name>
+	            <texture>APW-JT3D.png</texture>
+            </turbofan>        
+    </model>
+</sim>
+</PropertyList>

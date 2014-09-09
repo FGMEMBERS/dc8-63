@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList>
+ <sim>
+  <description>Douglas DC-8-63</description>
+  <author>Bob Faulkner, Isaias Prestes</author>
+  <status>alpha</status>
+  <aircraft-version>0.02</aircraft-version>
+  <flight-model>jsb</flight-model>
+  <aero>dc8-63</aero>
+  
+  <startup>
+   <splash-texture>Aircraft/dc8-63/splash.png</splash-texture>
+  </startup>
+
+  <model>
+		   <path>Aircraft/dc8-63/Models/dc8-63.xml</path>
+		   <livery>
+		    <file type="string">APW</file>
+		   </livery>
+            <turbofan>
+                <file type="string">APW</file>
+            </turbofan>
+  </model>
+
+  <view n="0">
+	   <name>Cockpit View</name>
+	   <type>lookfrom</type>
+	   <internal type="bool">true</internal>
+	   <config>
+		    <x-offset-m type="double">-0.4</x-offset-m>
+		    <y-offset-m type="double">-1.645</y-offset-m>
+		    <z-offset-m type="double">-25.4</z-offset-m>
+			<pitch-offset-deg archive="y">-14.7</pitch-offset-deg>
+		    <limits>
+		     <enabled type="bool">true</enabled>
+		     <left>
+		      <heading-max-deg type="double">140</heading-max-deg>
+		      <x-offset-max-m type="double">0.70</x-offset-max-m>
+		      <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+		     </left>
+		     <right>
+		      <heading-max-deg type="double">160</heading-max-deg>
+		      <x-offset-max-m type="double">0.25</x-offset-max-m>
+		      <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+		     </right>
+		    </limits>
+	   </config>
+  </view>
+  <view n="1">
+			<internal archive="y">false</internal>
+		   <config>
+		    <!-- extend chase view offset -->
+		    <z-offset-m type="double">-60.0</z-offset-m>
+		   </config>
+  </view>
+		<view n="2">
+			<name>Good runway angle</name>
+			<internal archive="y">false</internal>
+			<config>
+				<z-offset-m type="double" archive="y">-60.0</z-offset-m>
+				<pitch-offset-deg archive="y"> 12.0</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="3">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="4">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="5">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="6">
+			<internal archive="y">false</internal>
+		</view>
+		<view n="1500">
+			<name>Left Wing</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<pitch-offset-deg>-7.31</pitch-offset-deg>
+				<heading-offset-deg type="double">100.8</heading-offset-deg>
+				<!-- parallel to the panel -->
+				<x-offset-m archive="y"> -2.24714 </x-offset-m>
+				<!--Left/Right -->
+				<y-offset-m archive="y"> -1.645 </y-offset-m>
+				<!--Up/Down -->
+				<z-offset-m archive="y"> 1.64343 </z-offset-m>
+				<!--Fdw/Back -->
+			</config>
+		</view>
+		<view n="1501">
+			<name>Right Turbofan</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<pitch-offset-deg>-14.0</pitch-offset-deg>
+				<heading-offset-deg type="double">260.55</heading-offset-deg>
+				<!-- parallel to the panel -->
+				<x-offset-m archive="y"> 2.24714 </x-offset-m>
+				<!--Left/Right -->
+				<y-offset-m archive="y"> -1.645 </y-offset-m>
+				<!--Up/Down -->
+				<z-offset-m archive="y"> 1.64343 </z-offset-m>
+				<!--Fdw/Back -->
+			</config>
+		</view>
+		<view n="1502">
+			<name>Landing Gear</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<pitch-offset-deg>-8.0</pitch-offset-deg>
+				<heading-offset-deg type="double">0</heading-offset-deg>
+				<!-- parallel to the panel -->
+				<x-offset-m archive="y"> 0.0 </x-offset-m>
+				<!--Left/Right -->
+				<y-offset-m archive="y"> -4.945 </y-offset-m>
+				<!--Up/Down -->
+				<z-offset-m archive="y"> 6.91416 </z-offset-m>
+				<!--Fdw/Back -->
+			</config>
+		</view>
+		<view n="1503">
+			<name>Cabin</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<heading-offset-deg type="double">0</heading-offset-deg>
+				<!-- x/y/z == (esquerda, direita)/(cima, baixo)/(frente, tras) -->
+		    <x-offset-m type="double">  0.000</x-offset-m>
+		    <y-offset-m type="double"> -1.345</y-offset-m>
+		    <z-offset-m type="double">-24.400</z-offset-m>
+				<pitch-offset-deg archive="y">-12.9</pitch-offset-deg>
+			</config>
+		</view>
+		<view n="1504">
+			<name>Copilot</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<dynamic-view type="bool">true</dynamic-view>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">55</default-field-of-view-deg>
+				<heading-offset-deg type="double">15.75</heading-offset-deg>
+				<!-- x/y/z == (esquerda, direita)/(cima, baixo)/(frente, tras) -->
+		    <x-offset-m type="double"> 0.55</x-offset-m>
+		    <y-offset-m type="double">-1.645</y-offset-m>
+		    <z-offset-m type="double">-25.4</z-offset-m>
+				<pitch-offset-deg archive="y">-16.8</pitch-offset-deg>
+			</config>
+		</view>
+
+  <chase-distance-m>-55</chase-distance-m>
+
+  <flaps>
+   <setting>0.000</setting>
+   <setting>0.250</setting> 
+   <setting>0.375</setting> 
+   <setting>0.500</setting> 
+   <setting>0.750</setting> 
+   <setting>1.000</setting> 
+  </flaps>
+
+  <sound>
+   <path>Aircraft/dc8-63/Sounds/dc8-63-sound.xml</path>
+   <switch type = "bool">0</switch>
+   <stall-horn type="bool">0</stall-horn>
+  </sound>
+
+  <instrumentation>
+   <path>Aircraft/dc8-63/Instruments/instrumentation.xml</path>
+  </instrumentation>
+
+<weight n="0">
+ <name>Crew</name>
+ <weight-lb>350</weight-lb>
+ <max-lb>500</max-lb>
+ <min-lb>350</min-lb>
+</weight>
+
+<weight n="1">
+ <name>Cargo</name>
+ <weight-lb>50000</weight-lb>
+ <max-lb>59000</max-lb>
+ <min-lb>0</min-lb>
+</weight>
+
+		<!-- O menu de ajuda da aeronave -->
+		<help>
+			<title>DC-8-63</title>
+			<line>Choose your favorit texture using the key above</line>
+			<line>To start the plane you have to select "Engine Starter" and then when</line>
+			<line>n2 shows 25 you have to select "Engine Start", If you want to cutoff</line>
+			<line>the engine just select "Engine Start"</line>
+			<key>
+				<name>l</name>
+				<desc>Brings up the Livery Switching Dialog</desc>
+			</key>
+			<key>
+				<name>Del</name>
+				<desc>Toggle Reversers</desc>
+			</key>
+			<key>
+				<name>Ctrl+B</name>
+				<desc>Toggle SpeedBrake</desc>
+			</key>
+		   <key>
+			    <name>b </name>
+			    <desc>Brakes</desc>
+		   </key>
+		   <key>
+			    <name>Shift+b </name>
+			    <desc>Parking brakes</desc>
+		   </key>
+			<key>
+				<name>w</name>
+				<desc>Engage nose wheel steering</desc>
+			</key>
+		</help>
+
+		<!-- Entradas para o menu de apoio para controle da aeronave -->
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>DC-8-63</label>
+					<enabled type="bool">true</enabled>
+                    <item>
+                        <label>Autostart</label>
+                        <binding>
+                            <command>property-toggle</command>
+                            <property>sim/model/start-idling</property>
+                        </binding>
+                    </item>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.open()</script>
+						</binding>
+					</item>
+
+					<item>
+						<label>Lights</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/lights-config/dialog", "Aircraft/dc8-63/Dialogs/lights-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>lightcontrol</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Engines</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/engines-config/dialog", "Aircraft/dc8-63/Dialogs/engines-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>enginecontrol</dialog-name>
+						</binding>
+					</item>
+					
+					<item>
+						<label>Communication</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/communication-config/dialog", "Aircraft/dc8-63/Dialogs/comunication-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>communication</dialog-name>
+						</binding>
+					</item>
+
+					<item>
+						<label>Ground Service Pax</label>
+						<binding>
+							<command>nasal</command>
+							<script>groundservice.serviceonoffPax()</script>
+						</binding>
+					</item>
+
+					<item>
+						<label>Ground Service Cargo</label>
+						<binding>
+							<command>nasal</command>
+							<script>groundservice.serviceonoffCargo()</script>
+						</binding>
+					</item>
+					
+					<!--Ground proximity warning system (GPWS)-->
+					<item>
+						<label>Ground proximity warning system (GPWS)</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>instrumentation/mk-viii/servicable</property>
+						</binding>
+					</item>
+					
+		        <item>
+		          <label>Yoke On/Off</label>
+		          <binding>
+		            <command>property-toggle</command>
+		            <property>/sim/yoke-visible</property>
+		          </binding>
+		        </item>
+					
+					<!-- Dialogo do Pushback -->
+				   <item>
+					    <label>Pushback</label>
+					    <name>pushback</name>
+					    <binding>
+						     <command>dialog-show</command>
+						     <dialog-name>pushback</dialog-name>
+					    </binding>
+				   </item>
+				</menu>
+			</default>
+		</menubar>
+  
+ </sim>
+ 
+ 
+<engines>
+ <engine n="0">
+  <reverser-position type="double">0.000000</reverser-position>
+  <running>true</running>
+ </engine>     
+ <engine n="1">
+  <reverser-position type="double">0.000000</reverser-position>
+  <running>true</running>
+ </engine>    
+ <engine n="2">
+  <reverser-position type="double">0.000000</reverser-position>
+  <running>true</running>
+ </engine>    
+ <engine n="3">
+  <reverser-position type="double">0.000000</reverser-position>
+  <running>true</running>
+ </engine>    
+</engines>
+
+  <systems>
+   <path>Aircraft/dc8-63/Systems/systems.xml</path>
+			<electrical>
+				<path>Aircraft/dc8-63/Systems/electrical.xml</path>
+			</electrical>
+                <systems>
+      <file>Aircraft/dc8-63/Models/Instruments/KLN90B/kln90b.nas</file>
+    </systems>
+  </systems>
+
+<input>
+ <keyboard>
+  <key n="127">
+   <name>Delete</name>
+   <desc>Toggle Reversers</desc>
+   <binding>
+    <command>nasal</command>
+    <script>reversethrust.togglereverser()</script>
+   </binding>
+  </key>
+ </keyboard>
+</input>
+
+<nasal>
+		<vr2>
+			<file>Aircraft/dc8-63/Nasal/FMC.nas</file>
+		</vr2>
+	    <livery>
+	        <file>Aircraft/dc8-63/Nasal/livery.nas</file>
+	    </livery>
+		<tyresmoke>
+			<file>Aircraft/dc8-63/Nasal/tyresmoke.nas</file>
+		</tyresmoke>
+		<reversethrust>
+			<file>Aircraft/dc8-63/Nasal/reverse-thrust.nas</file>
+		</reversethrust>
+		<general>
+			<file>Aircraft/dc8-63/Nasal/general.nas</file>
+		</general>
+		<lights>
+			<file>Aircraft/dc8-63/Nasal/lights.nas</file>
+		</lights>
+		<groundservice>
+			<file>Aircraft/dc8-63/Nasal/groundservice.nas</file>
+		</groundservice>
+</nasal>
+
+	<controls>
+		<groundservice>
+			<pax>
+				<active type="bool">false</active>				
+			</pax>
+			<cargo>
+				<active type="bool">false</active>				
+			</cargo>
+		</groundservice>
+		<gear>
+			<brake-parking>1.0</brake-parking>
+			<gear-down>true</gear-down>
+		</gear>
+		<lighting>
+			<instruments-norm type="double">0.0</instruments-norm>
+			<landing-lights type="bool">0</landing-lights>
+			<beacon type="bool">0</beacon>
+			<strobe type="bool">0</strobe>
+			<nav-lights type="bool">0</nav-lights>
+			<cabin-lights type="bool">0</cabin-lights>
+			<wing-lights type="bool">0</wing-lights>
+			<taxi-light type="bool">0</taxi-light>
+			<instrument-lights type="bool">0</instrument-lights>
+		</lighting>
+		<cabin>
+			<fan type="bool">0</fan>
+			<heat type="bool">0</heat>
+		</cabin>
+		<messages>
+			<embarque type="bool">0</embarque>
+			<eqpeletr type="bool">0</eqpeletr>
+			<duremb type="bool">0</duremb>
+			<decauth type="bool">0</decauth>
+			<servicobordo type="bool">0</servicobordo>
+			<cmteprobl type="bool">0</cmteprobl>
+			<cmtepousauth type="bool">0</cmtepousauth>
+			<cmteaguardar type="bool">0</cmteaguardar>
+			<taxiando type="bool">0</taxiando>
+			<fastenseatbelt type="bool">0</fastenseatbelt>
+			<turb type="bool">0</turb>
+			<inicialcmte type="bool">0</inicialcmte>
+			<instrsegur type="bool">0</instrsegur>
+		</messages>
+	</controls>
+	
+	<!-- Ajustes da Instrumentação -->
+	<instrumentation>
+        <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
+            <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
+            <configuration-module>
+                <category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+                   255 <!-- aircraft type T1, fast turbofan -->
+                </category-1>
+                <category-4>                    <!-- ALTITUDE_CALLOUTS -->
+                    13 <!-- enable all altitude callouts -->
+                </category-4>
+                <category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+                     5 <!-- flashing warning lamp -->
+                </category-13>
+            </configuration-module>
+            <inputs>                            <!-- Module I/O -->
+                <arinc429>
+                    <!-- provide fixed value for decision height -->
+                    <decision-height-ncd> false </decision-height-ncd>
+                    <decision-height> 250 </decision-height>
+                </arinc429>
+            </inputs>
+            <input-feeders>    <!-- disable some internal default feeders -->
+                <discretes>
+                    <!-- will provide custom (nasal) sources for the following input feeders -->
+                    <glideslope-inhibit> false </glideslope-inhibit>
+                    <landing-gear> false </landing-gear>
+                    <landing-flaps> false </landing-flaps>
+                </discretes>
+            </input-feeders>
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+                <volume> 0.6 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+        </mk-viii>
+
+        <adf n="1">
+            <serviceable type="bool">1</serviceable>
+            <mode>adf</mode>
+            <frequencies>
+                <selected-khz>375</selected-khz>
+                <standby-khz>395</standby-khz>
+            </frequencies>
+        </adf>
+        <nav>
+            <frequencies>
+                <standby-mhz n="1" type="double">108.10</standby-mhz>
+                <standby-mhz n="2" type="double">127.85</standby-mhz>
+                <standby-mhz n="3" type="double">110.30</standby-mhz>
+                <standby-mhz n="4" type="double">114.00</standby-mhz>
+            </frequencies>
+        </nav>
+        <nav n="1">
+            <frequencies>
+                <standby-mhz n="1" type="double">109.50</standby-mhz>
+                <standby-mhz n="2" type="double">109.55</standby-mhz>
+                <standby-mhz n="3" type="double">110.10</standby-mhz>
+                <standby-mhz n="4" type="double">111.70</standby-mhz>
+            </frequencies>
+        </nav>
+		<wxradar>
+			<serviceable>true</serviceable>
+			<range type="int" archive="y">20</range>
+			<minimized type="bool" archive="y">false</minimized>
+			<switch archive="y">on</switch>
+			<mode archive="y">wx</mode>
+			<lightning type="bool" archive="y">true</lightning>
+			<display-mode archive="y">arc</display-mode>
+		</wxradar>
+		<radar>
+			<range type="int" archive="y">20</range>
+		</radar>
+		<transponder>
+			<id-code>1200</id-code>
+			<ta-ra>0</ta-ra>
+		</transponder>
+
+	</instrumentation>
+
+
+</PropertyList>
+

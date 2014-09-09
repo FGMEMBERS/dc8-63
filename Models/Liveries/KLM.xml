@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+	        <livery>
+	            <name type="string">KLM Royal Dutch AIrlines</name>
+	            <texture>KLM.png</texture>
+	        </livery>
+            <turbofan>
+	            <name type="string">KLM</name>
+	            <texture>JT3D.png</texture>
+            </turbofan>        
+    </model>
+</sim>
+</PropertyList>
