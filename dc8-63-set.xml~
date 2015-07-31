@@ -368,6 +368,7 @@
 		<weight n="1">
 			<name>Cabin Crew</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+			<weight-lb>800</weight-lb>
 			<max-lb>800</max-lb>
 			<min-lb>0</min-lb>
 		</weight>
@@ -375,6 +376,7 @@
 		<weight n="2">
 			<name>Passengers</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
+			<weight-lb>40000</weight-lb>
 			<max-lb>42400</max-lb>
 			<min-lb>0</min-lb>
 		</weight>
@@ -382,6 +384,7 @@
 		<weight n="3">
 			<name>Cargo</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+			<weight-lb>0</weight-lb>
 			<max-lb>59000</max-lb>
 			<min-lb>0</min-lb>
 		</weight>
