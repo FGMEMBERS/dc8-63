@@ -21,6 +21,7 @@
  <animation>
   <type>material</type>
 	  <object-name>Fuselage</object-name>
+	  <object-name>Doors</object-name>
 	  <object-name>LWing</object-name>
 	  <object-name>RWing</object-name>
 	  <object-name>VStab</object-name>
