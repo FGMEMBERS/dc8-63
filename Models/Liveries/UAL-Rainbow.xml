@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+	        <livery>
+	            <name type="string">UAL - Rainbow</name>
+	            <texture>Liveries/UAL-Rainbow.png</texture>
+	        </livery>
+            <turbofan>
+	            <name type="string">UAL</name>
+	            <texture>JT3D.png</texture>
+            </turbofan>        
+    </model>
+</sim>
+</PropertyList>
