@@ -1,58 +1,68 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+
 <PropertyList>
- <sim>
-  <description>Douglas DC-8-63</description>
-  <author>Bob Faulkner, Isaias Prestes</author>
-  <status>alpha</status>
-  <aircraft-version>0.02</aircraft-version>
-  <flight-model>jsb</flight-model>
-  <aero>dc8-63</aero>
+	<sim>
+		<description>Douglas DC-8-63</description>
+		<author>Bob Faulkner, Isaias Prestes</author>
+		<status>alpha</status>
+		<aircraft-version>0.02</aircraft-version>
+		<flight-model>jsb</flight-model>
+		<aero>dc8-63</aero>
   
-  <startup>
-   <splash-texture>Aircraft/dc8-63/splash.png</splash-texture>
-  </startup>
+		<startup>
+			<splash-texture>Aircraft/dc8-63/splash.png</splash-texture>
+		</startup>
 
-  <model>
-		   <path>Aircraft/dc8-63/Models/dc8-63.xml</path>
-		   <livery>
-		    <file type="string">APW</file>
-		   </livery>
-            <turbofan>
-                <file type="string">APW</file>
-            </turbofan>
-  </model>
+		<model>
+			<path>Aircraft/dc8-63/Models/dc8-63.xml</path>
+			<livery>
+				<file type="string">APW</file>
+			</livery>
+			<turbofan>
+				<file type="string">APW</file>
+			</turbofan>
+		</model>
 
-  <view n="0">
-	   <name>Cockpit View</name>
-	   <type>lookfrom</type>
-	   <internal type="bool">true</internal>
-	   <config>
-		    <x-offset-m type="double">-0.4</x-offset-m>
-		    <y-offset-m type="double">-1.645</y-offset-m>
-		    <z-offset-m type="double">-25.4</z-offset-m>
-			<pitch-offset-deg archive="y">-14.7</pitch-offset-deg>
-		    <limits>
-		     <enabled type="bool">true</enabled>
-		     <left>
-		      <heading-max-deg type="double">140</heading-max-deg>
-		      <x-offset-max-m type="double">0.70</x-offset-max-m>
-		      <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-		     </left>
-		     <right>
-		      <heading-max-deg type="double">160</heading-max-deg>
-		      <x-offset-max-m type="double">0.25</x-offset-max-m>
-		      <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
-		     </right>
-		    </limits>
-	   </config>
-  </view>
-  <view n="1">
+		<!-- Integrated Systems -->
+		<systems>
+			<autopilot>
+				<path>Aircraft/dc8-63/Systems/SYS8_0_autopilot.xml</path>
+			</autopilot>
+		</systems>
+
+		<view n="0">
+			<name>Cockpit View</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+				<x-offset-m type="double">-0.4</x-offset-m>
+				<y-offset-m type="double">-1.645</y-offset-m>
+				<z-offset-m type="double">-25.4</z-offset-m>
+				<pitch-offset-deg archive="y">-14.7</pitch-offset-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.70</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">160</heading-max-deg>
+						<x-offset-max-m type="double">0.25</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
+
+		<view n="1">
 			<internal archive="y">false</internal>
-		   <config>
-		    <!-- extend chase view offset -->
-		    <z-offset-m type="double">-60.0</z-offset-m>
-		   </config>
-  </view>
+			<config>
+				<!-- extend chase view offset -->
+				<z-offset-m type="double">-60.0</z-offset-m>
+			</config>
+		</view>
+
 		<view n="2">
 			<name>Good runway angle</name>
 			<internal archive="y">false</internal>
@@ -61,18 +71,23 @@
 				<pitch-offset-deg archive="y"> 12.0</pitch-offset-deg>
 			</config>
 		</view>
+
 		<view n="3">
 			<internal archive="y">false</internal>
 		</view>
+
 		<view n="4">
 			<internal archive="y">false</internal>
 		</view>
+
 		<view n="5">
 			<internal archive="y">false</internal>
 		</view>
+
 		<view n="6">
 			<internal archive="y">false</internal>
 		</view>
+
 		<view n="1500">
 			<name>Left Wing</name>
 			<type>lookfrom</type>
@@ -93,6 +108,7 @@
 				<!--Fdw/Back -->
 			</config>
 		</view>
+
 		<view n="1501">
 			<name>Right Turbofan</name>
 			<type>lookfrom</type>
@@ -113,6 +129,7 @@
 				<!--Fdw/Back -->
 			</config>
 		</view>
+
 		<view n="1502">
 			<name>Landing Gear</name>
 			<type>lookfrom</type>
@@ -133,6 +150,7 @@
 				<!--Fdw/Back -->
 			</config>
 		</view>
+
 		<view n="1503">
 			<name>Cabin</name>
 			<type>lookfrom</type>
@@ -150,6 +168,7 @@
 				<pitch-offset-deg archive="y">-12.9</pitch-offset-deg>
 			</config>
 		</view>
+
 		<view n="1504">
 			<name>Copilot</name>
 			<type>lookfrom</type>
@@ -169,42 +188,28 @@
 			</config>
 		</view>
 
-  <chase-distance-m>-55</chase-distance-m>
+		<chase-distance-m>-55</chase-distance-m>
 
-  <flaps>
-   <setting>0.000</setting>
-   <setting>0.250</setting> 
-   <setting>0.375</setting> 
-   <setting>0.500</setting> 
-   <setting>0.750</setting> 
-   <setting>1.000</setting> 
-  </flaps>
+		<flaps>
+			<setting>0.000</setting>
+			<setting>0.250</setting> 
+			<setting>0.375</setting> 
+			<setting>0.500</setting> 
+			<setting>0.750</setting> 
+			<setting>1.000</setting> 
+		</flaps>
 
-  <sound>
-   <path>Aircraft/dc8-63/Sounds/dc8-63-sound.xml</path>
-   <switch type = "bool">0</switch>
-   <stall-horn type="bool">0</stall-horn>
-  </sound>
+		<sound>
+			<path>Aircraft/dc8-63/Sounds/dc8-63-sound.xml</path>
+			<switch type = "bool">0</switch>
+			<stall-horn type="bool">0</stall-horn>
+		</sound>
 
-  <instrumentation>
-   <path>Aircraft/dc8-63/Instruments/instrumentation.xml</path>
-  </instrumentation>
+		<instrumentation>
+			<path>Aircraft/dc8-63/Instruments/instrumentation.xml</path>
+		</instrumentation>
 
-<weight n="0">
- <name>Crew</name>
- <weight-lb>350</weight-lb>
- <max-lb>500</max-lb>
- <min-lb>350</min-lb>
-</weight>
-
-<weight n="1">
- <name>Cargo</name>
- <weight-lb>50000</weight-lb>
- <max-lb>59000</max-lb>
- <min-lb>0</min-lb>
-</weight>
-
-		<!-- O menu de ajuda da aeronave -->
+		<!-- Aircraft help -->
 		<help>
 			<title>DC-8-63</title>
 			<line>Choose your favorit texture using the key above</line>
@@ -237,19 +242,21 @@
 			</key>
 		</help>
 
-		<!-- Entradas para o menu de apoio para controle da aeronave -->
+		<!-- Control menu entries -->
 		<menubar>
 			<default>
 				<menu n="100">
 					<label>DC-8-63</label>
 					<enabled type="bool">true</enabled>
-                    <item>
-                        <label>Autostart</label>
-                        <binding>
-                            <command>property-toggle</command>
-                            <property>sim/model/start-idling</property>
-                        </binding>
-                    </item>
+
+					<item>
+						<label>Autostart</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/start-idling</property>
+						</binding>
+					</item>
+					
 					<item>
 						<label>Select Livery</label>
 						<binding>
@@ -263,8 +270,8 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							  var dlg = gui.Dialog.new("/sim/gui/dialogs/lights-config/dialog", "Aircraft/dc8-63/Dialogs/lights-dialog.xml");
-				       </script>
+								var dlg = gui.Dialog.new("/sim/gui/dialogs/lights-config/dialog", "Aircraft/dc8-63/Dialogs/lights-dialog.xml");
+							</script>
 						</binding>
 						<binding>
 							<command>dialog-show</command>
@@ -276,8 +283,9 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							  var dlg = gui.Dialog.new("/sim/gui/dialogs/engines-config/dialog", "Aircraft/dc8-63/Dialogs/engines-dialog.xml");
-				       </script>
+								var dlg = gui.Dialog.new("/sim/gui/dialogs/engines-config/dialog", 
+										         "Aircraft/dc8-63/Dialogs/engines-dialog.xml");
+							</script>
 						</binding>
 						<binding>
 							<command>dialog-show</command>
@@ -290,8 +298,9 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							  var dlg = gui.Dialog.new("/sim/gui/dialogs/communication-config/dialog", "Aircraft/dc8-63/Dialogs/comunication-dialog.xml");
-				       </script>
+								var dlg = gui.Dialog.new("/sim/gui/dialogs/communication-config/dialog", 
+											 "Aircraft/dc8-63/Dialogs/comunication-dialog.xml");
+							</script>
 						</binding>
 						<binding>
 							<command>dialog-show</command>
@@ -324,79 +333,148 @@
 						</binding>
 					</item>
 					
-		        <item>
-		          <label>Yoke On/Off</label>
-		          <binding>
-		            <command>property-toggle</command>
-		            <property>/sim/yoke-visible</property>
-		          </binding>
-		        </item>
+					<item>
+						<label>Yoke On/Off</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/yoke-visible</property>
+						</binding>
+					</item>
 					
-					<!-- Dialogo do Pushback -->
-				   <item>
-					    <label>Pushback</label>
-					    <name>pushback</name>
-					    <binding>
-						     <command>dialog-show</command>
-						     <dialog-name>pushback</dialog-name>
-					    </binding>
-				   </item>
+					<!-- Pushback dialog-->
+					<item>
+						<label>Pushback</label>
+						<name>pushback</name>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>pushback</dialog-name>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
   
- </sim>
- 
- 
-<engines>
- <engine n="0">
-  <reverser-position type="double">0.000000</reverser-position>
-  <running>true</running>
- </engine>     
- <engine n="1">
-  <reverser-position type="double">0.000000</reverser-position>
-  <running>true</running>
- </engine>    
- <engine n="2">
-  <reverser-position type="double">0.000000</reverser-position>
-  <running>true</running>
- </engine>    
- <engine n="3">
-  <reverser-position type="double">0.000000</reverser-position>
-  <running>true</running>
- </engine>    
-</engines>
+	</sim>
 
-  <systems>
-   <path>Aircraft/dc8-63/Systems/systems.xml</path>
+	<payload> 
+
+		<weight n="0">
+			<name>Cockpit Crew</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
+			<max-lb>800</max-lb>
+			<min-lb>200</min-lb>
+		</weight>
+
+		<weight n="1">
+			<name>Cabin Crew</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
+			<max-lb>800</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+
+		<weight n="2">
+			<name>Passengers</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
+			<max-lb>42400</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+
+		<weight n="3">
+			<name>Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+			<max-lb>59000</max-lb>
+			<min-lb>0</min-lb>
+		</weight>
+
+	</payload>
+
+ 	<limits>
+		<mass-and-balance>
+			<maximum-takeoff-mass-lbs>355000</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>275000</maximum-landing-mass-lbs>
+		</mass-and-balance>
+	</limits>
+
+	<engines>
+		<engine n="0">
+			<reverser-position type="double">0.000000</reverser-position>
+			<running>true</running>
+		</engine>     
+
+		<engine n="1">
+			<reverser-position type="double">0.000000</reverser-position>
+			<running>true</running>
+		</engine>    
+
+		<engine n="2">
+			<reverser-position type="double">0.000000</reverser-position>
+			<running>true</running>
+		</engine>    
+
+		<engine n="3">
+			<reverser-position type="double">0.000000</reverser-position>
+			<running>true</running>
+		</engine>    
+	</engines>
+
+	<systems>
+		<path>Aircraft/dc8-63/Systems/systems.xml</path>
 			<electrical>
 				<path>Aircraft/dc8-63/Systems/electrical.xml</path>
 			</electrical>
                 <systems>
-      <file>Aircraft/dc8-63/Models/Instruments/KLN90B/kln90b.nas</file>
-    </systems>
-  </systems>
+			<file>Aircraft/dc8-63/Models/Instruments/KLN90B/kln90b.nas</file>
+		</systems>
+	</systems>
 
-<input>
- <keyboard>
-  <key n="127">
-   <name>Delete</name>
-   <desc>Toggle Reversers</desc>
-   <binding>
-    <command>nasal</command>
-    <script>reversethrust.togglereverser()</script>
-   </binding>
-  </key>
- </keyboard>
-</input>
+	<input>
+		<keyboard>
 
-<nasal>
+			<key n="127">
+				<name>Delete</name>
+				<desc>Toggle Reversers</desc>
+				<binding>
+					<command>nasal</command>
+					<script>reversethrust.togglereverser()</script>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+  
+	<autopilot>
+
+		<settings>
+			<kts-mach-select type="string">kts</kts-mach-select>
+			<max-pitch type="double">6.0</max-pitch>
+			<min-pitch type="double">-4.0</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+		</settings>
+
+		<internal>
+			<target-pitch-deg type="double">0.00</target-pitch-deg>
+			<max-pitch type="double">6.0</max-pitch>
+			<min-pitch type="double">-4.0</min-pitch>
+		</internal>
+
+	</autopilot>
+
+	<!-- Voodoomaster plane specific initializations -->
+	<voodoomaster>
+		<steering-wheel type="int">0</steering-wheel>
+		<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
+		<model-direction>180.00</model-direction>
+		<pushback>
+			<activated type="bool">false</activated>
+		</pushback>
+	</voodoomaster>
+
+	<nasal>
 		<vr2>
 			<file>Aircraft/dc8-63/Nasal/FMC.nas</file>
 		</vr2>
-	    <livery>
-	        <file>Aircraft/dc8-63/Nasal/livery.nas</file>
-	    </livery>
+		<livery>
+			<file>Aircraft/dc8-63/Nasal/livery.nas</file>
+		</livery>
 		<tyresmoke>
 			<file>Aircraft/dc8-63/Nasal/tyresmoke.nas</file>
 		</tyresmoke>
@@ -412,7 +490,7 @@
 		<groundservice>
 			<file>Aircraft/dc8-63/Nasal/groundservice.nas</file>
 		</groundservice>
-</nasal>
+	</nasal>
 
 	<controls>
 		<groundservice>
@@ -459,67 +537,71 @@
 		</messages>
 	</controls>
 	
-	<!-- Ajustes da Instrumentação -->
+	<!-- Instrunent settings -->
 	<instrumentation>
-        <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
-            <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
-            <configuration-module>
-                <category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
-                   255 <!-- aircraft type T1, fast turbofan -->
-                </category-1>
-                <category-4>                    <!-- ALTITUDE_CALLOUTS -->
-                    13 <!-- enable all altitude callouts -->
-                </category-4>
-                <category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
-                     5 <!-- flashing warning lamp -->
-                </category-13>
-            </configuration-module>
-            <inputs>                            <!-- Module I/O -->
-                <arinc429>
-                    <!-- provide fixed value for decision height -->
-                    <decision-height-ncd> false </decision-height-ncd>
-                    <decision-height> 250 </decision-height>
-                </arinc429>
-            </inputs>
-            <input-feeders>    <!-- disable some internal default feeders -->
-                <discretes>
-                    <!-- will provide custom (nasal) sources for the following input feeders -->
-                    <glideslope-inhibit> false </glideslope-inhibit>
-                    <landing-gear> false </landing-gear>
-                    <landing-flaps> false </landing-flaps>
-                </discretes>
-            </input-feeders>
-            <speaker>                           <!-- Speaker Configuration -->
-                <max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
-                <reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
-                <volume> 0.6 </volume>          <!-- Volume at reference distance -->
-            </speaker>
-        </mk-viii>
 
-        <adf n="1">
-            <serviceable type="bool">1</serviceable>
-            <mode>adf</mode>
-            <frequencies>
-                <selected-khz>375</selected-khz>
-                <standby-khz>395</standby-khz>
-            </frequencies>
-        </adf>
-        <nav>
-            <frequencies>
-                <standby-mhz n="1" type="double">108.10</standby-mhz>
-                <standby-mhz n="2" type="double">127.85</standby-mhz>
-                <standby-mhz n="3" type="double">110.30</standby-mhz>
-                <standby-mhz n="4" type="double">114.00</standby-mhz>
-            </frequencies>
-        </nav>
-        <nav n="1">
-            <frequencies>
-                <standby-mhz n="1" type="double">109.50</standby-mhz>
-                <standby-mhz n="2" type="double">109.55</standby-mhz>
-                <standby-mhz n="3" type="double">110.10</standby-mhz>
-                <standby-mhz n="4" type="double">111.70</standby-mhz>
-            </frequencies>
-        </nav>
+		<mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
+			<serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
+			<configuration-module>
+				<category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+					255 <!-- aircraft type T1, fast turbofan -->
+				</category-1>
+				<category-4>                    <!-- ALTITUDE_CALLOUTS -->
+					13 <!-- enable all altitude callouts -->
+				</category-4>
+				<category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+					5 <!-- flashing warning lamp -->
+				</category-13>
+			</configuration-module>
+			<inputs>                            <!-- Module I/O -->
+				<arinc429>
+					<!-- provide fixed value for decision height -->
+					<decision-height-ncd> false </decision-height-ncd>
+					<decision-height> 250 </decision-height>
+				</arinc429>
+			</inputs>
+			<input-feeders>    <!-- disable some internal default feeders -->
+				<discretes>
+					<!-- will provide custom (nasal) sources for the following input feeders -->
+					<glideslope-inhibit> false </glideslope-inhibit>
+					<landing-gear> false </landing-gear>
+					<landing-flaps> false </landing-flaps>
+				</discretes>
+			</input-feeders>
+			<speaker>                           <!-- Speaker Configuration -->
+				<max-dist> 2 </max-dist>        <!-- Max. distance where speaker is heard -->
+                		<reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+				<volume> 0.6 </volume>          <!-- Volume at reference distance -->
+			</speaker>
+		</mk-viii>
+
+		<adf n="1">
+			<serviceable type="bool">1</serviceable>
+			<mode>adf</mode>
+			<frequencies>
+				<selected-khz>375</selected-khz>
+				<standby-khz>395</standby-khz>
+			</frequencies>
+		</adf>
+
+		<nav>
+			<frequencies>
+				<standby-mhz n="1" type="double">108.10</standby-mhz>
+				<standby-mhz n="2" type="double">127.85</standby-mhz>
+				<standby-mhz n="3" type="double">110.30</standby-mhz>
+				<standby-mhz n="4" type="double">114.00</standby-mhz>
+			</frequencies>
+		</nav>
+
+		<nav n="1">
+			<frequencies>
+				<standby-mhz n="1" type="double">109.50</standby-mhz>
+				<standby-mhz n="2" type="double">109.55</standby-mhz>
+				<standby-mhz n="3" type="double">110.10</standby-mhz>
+				<standby-mhz n="4" type="double">111.70</standby-mhz>
+			</frequencies>
+		</nav>
+
 		<wxradar>
 			<serviceable>true</serviceable>
 			<range type="int" archive="y">20</range>
@@ -529,16 +611,17 @@
 			<lightning type="bool" archive="y">true</lightning>
 			<display-mode archive="y">arc</display-mode>
 		</wxradar>
+
 		<radar>
 			<range type="int" archive="y">20</range>
 		</radar>
+
 		<transponder>
 			<id-code>1200</id-code>
 			<ta-ra>0</ta-ra>
 		</transponder>
 
 	</instrumentation>
-
 
 </PropertyList>
 
