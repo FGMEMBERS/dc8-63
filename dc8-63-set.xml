@@ -3,14 +3,14 @@
 <PropertyList>
 	<sim>
 		<description>Douglas DC-8-63</description>
-		<author>Bob Faulkner, Isaias Prestes</author>
+		<author>Peter Brendth (JWocky), Israel Hernandez (IAHM-COL), Liam Gathercole, Isaias Prestes, Bob Faulkner</author>
 		<status>alpha</status>
 		<aircraft-version>0.02</aircraft-version>
 		<flight-model>jsb</flight-model>
 		<aero>dc8-63</aero>
   
 		<startup>
-			<splash-texture>Aircraft/dc8-63/splash.png</splash-texture>
+			<splash-texture>Aircraft/dc8-63/USATour-splash.png</splash-texture>
 		</startup>
 
 		<model>

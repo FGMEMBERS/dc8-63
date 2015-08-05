@@ -1,3 +1,10 @@
+USA TOUR Consortium, August 2015
+
+3D model modified to add Windows. New Paintkit and United Airlines Liveries - Israel Hernandez, IAHM-COL
+
+New FDM, new engines, new autopilot SYS8 - Peter Brendt, JWocky
+
+***
 3D model - Bob Faulkner, aka YOURGOD
 Conversion for DC-8-63 - Isaias Prestes
 FDM - Bob Faulkner with input from Aeromatic and countless other aircraft
@@ -13,6 +20,3 @@ Justin Smithies - Nasal , yasim , general research
 Directional Gyro used from the DC-6 model
 Authors
 Syd Adams.Ron Jensen
-
-
-
